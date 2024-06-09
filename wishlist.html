@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist | Carrot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div>
+      <!-- To Nav bar -->
+      <nav class="flex justify-around items-center py-4">
+        <img src="./images/logo.png" alt="logo" />
+        <form class="flex border border-indigo-600 w-5/12 rounded">
+          <input
+            name="keywords"
+            class="flex-1 px-2 rounded"
+            placeholder="Search For items..."
+          />
+          <select class="py-2 px-4 border-l border-indigo-600">
+            <option>All Categories</option>
+            <option value="mens">Men's</option>
+            <option value="womens">Women's</option>
+            <option value="electronics">Electronics</option>
+          </select>
+          <button class="bg-indigo-600 py-2 px-4 text-white">
+            <i class="ri-search-2-line"></i>
+          </button>
+        </form>
+
+        <div class="flex gap-6">
+          <button class="text-lg relative" id="account">
+            <i class="ri-user-line"></i>
+            Account
+            <div
+              class="bg-white border w-[150px] gap-2 rounded absolute top-10 right-0 flex flex-col"
+              id="account-menu"
+            >
+              <a
+                href="register.html"
+                class="text-sm w-full hover:bg-gray-100 text-left py-2 px-3 hover:text-indigo-600"
+                >Register</a
+              >
+              <a
+                href="login.html"
+                class="text-sm w-full hover:bg-gray-100 text-left py-2 px-3 hover:text-indigo-600"
+                >Login</a
+              >
+              <a
+                href="checkout.html"
+                class="text-sm w-full hover:bg-gray-100 text-left py-2 px-3 hover:text-indigo-600"
+                >Checkout</a
+              >
+            </div>
+          </button>
+
+          <button class="text-lg">
+            <i class="ri-heart-line"></i>
+            <a href="wishlist.html">Wishlist</a>
+          </button>
+
+          <button class="text-lg" id="cart">
+            <i class="ri-shopping-cart-line"></i>
+            Cart
+          </button>
+        </div>
+      </nav>
+
+      <!--Main navbar -->
+      <nav class="flex justify-around items-center py-4">
+        <button class="border text-xl w-12 h-12">
+          <i class="ri-menu-2-fill"></i>
+        </button>
+
+        <ul class="flex gap-12">
+          <li><a href="#" class="text-md font-semibold">Home</a></li>
+          <li><a href="#" class="text-md font-semibold">Category</a></li>
+          <li><a href="#" class="text-md font-semibold">Products</a></li>
+          <li><a href="#" class="text-md font-semibold">Blog</a></li>
+          <li><a href="#" class="text-md font-semibold">Contact</a></li>
+        </ul>
+
+        <select class="border py-2 px-16">
+          <option>Chicago</option>
+          <option>India</option>
+          <option>America</option>
+          <option>Nepal</option>
+          <option>Canada</option>
+        </select>
+      </nav>
+
+      <!-- Page Title  -->
+      <div class="bg-[#E4F2ED] flex justify-between px-32 py-4 items-center">
+        <h1 class="text-2xl font-semibold">Wishlist</h1>
+        <p class="font-semibold">
+          <span class="text-[#64b496]">Home</span> - Wishlist
+        </p>
+      </div>
+
+      <!-- Wishlist section -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 md:m-24 lg:m-12 m-8 md:gap-x-16 gap-y-8"
+      >
+        <div
+          class="border bg-white p-3 rounded-md flex flex-col items-center gap-2"
+        >
+          <div class="overflow-hidden img-zoom">
+            <img src="./images/lemon.jpg" alt="lemon" class="w-full" />
+            <div class="absolute top-3 -right-8 flex flex-col gap-2">
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-close-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-heart-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-eye-line"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 font-semibold">Vegetables</p>
+          <div>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-line text-yellow-600"></i>
+            <span class="text-xs text-gray-500">(4.5)</span>
+          </div>
+          <h1 class="text-lg font-semibold text-center hover:text-[#64b496]">
+            Fresh organic villa farm lomon 500gm pack
+          </h1>
+          <div class="flex gap-4 items-center">
+            <p class="font-bold text-[#64b496]">$120.25</p>
+            <del class="text-gray-500 text-sm font-semibold">$123.25</del>
+          </div>
+        </div>
+        <div
+          class="border bg-white p-3 rounded-md flex flex-col items-center gap-2"
+        >
+          <div class="overflow-hidden img-zoom">
+            <img src="./images/chochlate.jpg" alt="lemon" class="w-full" />
+            <div class="absolute top-3 -right-8 flex flex-col gap-2">
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-close-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-heart-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-eye-line"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 font-semibold">Snacks</p>
+          <div>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <span class="text-xs text-gray-500">(5.0)</span>
+          </div>
+          <h1 class="text-lg font-semibold text-center hover:text-[#64b496]">
+            Best snakes with hazel nut pack 200gm
+          </h1>
+          <div class="flex gap-4 items-center">
+            <p class="font-bold text-[#64b496]">$145</p>
+            <del class="text-gray-500 text-sm font-semibold">$150</del>
+          </div>
+        </div>
+        <div
+          class="border bg-white p-3 rounded-md flex flex-col items-center gap-2"
+        >
+          <div class="overflow-hidden img-zoom">
+            <img src="./images/AppleJuice.jpg" alt="lemon" class="w-full" />
+            <div class="absolute top-3 -right-8 flex flex-col gap-2">
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-close-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-heart-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-eye-line"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 font-semibold">Fruits</p>
+          <div>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-line text-yellow-600"></i>
+            <span class="text-xs text-gray-500">(4.5)</span>
+          </div>
+          <h1 class="text-lg font-semibold text-center hover:text-[#64b496]">
+            Fresh organic apple 1kg simla marming
+          </h1>
+          <div class="flex gap-4 items-center">
+            <p class="font-bold text-[#64b496]">$120.25</p>
+            <del class="text-gray-500 text-sm font-semibold">$123.25</del>
+          </div>
+        </div>
+        <div
+          class="border bg-white p-3 rounded-md flex flex-col items-center gap-2"
+        >
+          <div class="overflow-hidden img-zoom">
+            <img src="./images/Watermelon.jpg" alt="lemon" class="w-full" />
+            <div class="absolute top-3 -right-8 flex flex-col gap-2">
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-close-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-heart-line"></i>
+              </button>
+
+              <button class="bg-white shadow w-8 h-8 rounded-full">
+                <i class="ri-eye-line"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 font-semibold">Fruits</p>
+          <div>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-fill text-yellow-600"></i>
+            <i class="ri-star-line text-yellow-600"></i>
+            <i class="ri-star-line text-yellow-600"></i>
+            <span class="text-xs text-gray-500">(3.2)</span>
+          </div>
+          <h1 class="text-lg font-semibold text-center hover:text-[#64b496]">
+            Organic fresh venila farm watermelon 5kg
+          </h1>
+          <div class="flex gap-4 items-center">
+            <p class="font-bold text-[#64b496]">$50.30</p>
+            <del class="text-gray-500 text-sm font-semibold">$72.60</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer section -->
+      <footer class="bg-[#F7F7F8] px-24 py-8 flex flex-col">
+        <div class="flex gap-12">
+          <div class="space-y-5 w-[400px]">
+            <div>
+              <img src="./images/logo.png" alt="logo" />
+              <p class="text-zinc-600 mt-4">
+                Carrot is the biggest market of grocery products. Get your daily
+                needs from our store.
+              </p>
+            </div>
+            <div class="flex gap-2 text-gray-500">
+              <i class="ri-map-pin-line"></i>
+              <address>
+                51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783,
+                USA.
+              </address>
+            </div>
+            <div class="flex gap-2 text-gray-500">
+              <i class="ri-mail-send-line"></i>
+              <p>example@email.com</p>
+            </div>
+            <div class="flex gap-2 text-gray-500">
+              <i class="ri-phone-line"></i>
+              <p>+91 123 4567890</p>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h4 class="text-xl font-semibold">Company</h4>
+            <ul class="mt-4 space-y-4">
+              <li><a href="#" class="text-md text-gray-500">About Us</a></li>
+              <li>
+                <a href="#" class="text-md text-gray-500"
+                  >Delivery Information</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Terms & Conditions</a>
+              </li>
+              <li><a href="#" class="text-md text-gray-500">contact Us</a></li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Support Center</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1">
+            <h4 class="text-xl font-semibold">Category</h4>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <a href="#" class="text-md text-gray-500">Fashion & Clothes</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Dairy & Bakery</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Fruits & Vegetable</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Snack & Spice</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Juice & Drinks</a>
+              </li>
+              <li>
+                <a href="#" class="text-md text-gray-500">Fast Food</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="text-xl font-semibold">Newsletter</h4>
+
+            <div>
+              <p class="text-gray-500 mb-1">Subscribe to get in touch.</p>
+              <form class="relative w-[350px]">
+                <input
+                  name="email"
+                  type="email"
+                  required="true"
+                  class="border w-full p-2.5 rounded"
+                  placeholder="Enter Email"
+                />
+                <button class="absolute top-0 right-0 p-2.5 px-4" type="submit">
+                  <i class="ri-send-plane-fill"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="flex gap-2 items-center">
+              <a href="#" class="border bg-white block px-2.5 py-1.5 rounded"
+                ><i class="ri-facebook-line"></i
+              ></a>
+              <a href="#" class="border bg-white px-2.5 py-1.5 rounded"
+                ><i class="ri-twitter-x-line"></i
+              ></a>
+              <a href="#" class="border bg-white px-2.5 py-1.5 rounded"
+                ><i class="ri-linkedin-line"></i
+              ></a>
+              <a href="#" class="border bg-white px-2.5 py-1.5 rounded"
+                ><i class="ri-instagram-line"></i
+              ></a>
+            </div>
+
+            <div class="flex gap-2">
+              <a href="#">
+                <img
+                  src="./images/android.png"
+                  alt="android"
+                  class="rounded-md"
+                  width="150"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./images/apple.png"
+                  alt="apple"
+                  class="rounded-md"
+                  width="150"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="mt-8 mb-4" />
+        <div class="flex items-center justify-between">
+          <p>© 2024 Carrot, All rights reserved.</p>
+          <div>
+            <img src="./images/payment.png" alt="" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Cart -->
+
+    <div
+      class="w-full h-full bg-black bg-opacity-80 fixed top-0 left-0 hidden"
+      id="cart-overlay"
+    >
+      <div
+        class="bg-white w-[400px] h-full absolute top-0 right-0 py-4 px-6"
+        id="cart-list"
+      >
+        <div class="flex justify-between">
+          <h1 class="font-semibold text-lg">My Cart</h1>
+          <button class="text-rose-600 font-bold text-xl" id="close-btn">
+            <i class="ri-close-circle-line"></i>
+          </button>
+        </div>
+        <hr class="my-4" />
+        <ul class="space-y-8">
+          <li>
+            <div class="flex gap-4 border-b pb-6">
+              <img src="./images/cartlist1.jpg" alt="list1" class="w-[80px]" />
+              <div>
+                <p class="text-gray-500">Fresh Pomegranate</p>
+                <div>
+                  <label class="font-bold text-slate-500">$56.0</label>
+                  <label>x 1Kg</label>
+                </div>
+                <div
+                  class="border flex items-center w-[100px] rounded p-[4px] justify-around mt-1"
+                >
+                  <button class="text-lg increase-qnt">+</button>
+                  <label class="border-l-2 border-r-2 px-3 qnt">1</label>
+                  <button class="text-lg decrease-qnt">-</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex gap-4 border-b pb-6">
+              <img src="./images/cartlist2.jpg" alt="list1" class="w-[80px]" />
+              <div>
+                <p class="text-gray-500">Green Apple</p>
+                <div>
+                  <label class="font-bold text-slate-500">$75.0</label>
+                  <label>x 1Kg</label>
+                </div>
+                <div
+                  class="border flex items-center w-[100px] rounded p-[4px] justify-around mt-1"
+                >
+                  <button class="text-lg increase-qnt">+</button>
+                  <label class="border-l-2 border-r-2 px-3 qnt">1</label>
+                  <button class="text-lg decrease-qnt">-</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex gap-4 border-b pb-6">
+              <img src="./images/cartlist3.jpg" alt="list1" class="w-[80px]" />
+              <div>
+                <p class="text-gray-500">Watermelon - small</p>
+                <div>
+                  <label class="font-bold text-slate-500">$48.0</label>
+                  <label>x 5Kg</label>
+                </div>
+                <div
+                  class="border flex items-center w-[100px] rounded p-[4px] justify-around mt-1"
+                >
+                  <button class="text-lg increase-qnt">+</button>
+                  <label class="border-l-2 border-r-2 px-3 qnt">1</label>
+                  <button class="text-lg decrease-qnt">-</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="space-y-6">
+              <div class="flex justify-between">
+                <label class="text-slate-800">Sub-Total :</label>
+                <label class="font-bold">$300.00</label>
+              </div>
+              <div class="flex justify-between">
+                <label class="text-slate-800">VAT (20%) :</label>
+                <label class="font-bold">$300.00</label>
+              </div>
+              <div class="flex justify-between">
+                <label class="text-slate-800">VTotal :</label>
+                <label class="font-bold">$360.00</label>
+              </div>
+
+              <div class="flex justify-between">
+                <button
+                  class="bg-[#64b496] px-6 py-2.5 rounded font-semibold text-white hover:bg-black duration-300"
+                >
+                  View Cart
+                </button>
+                <button
+                  class="border-[#64b496] border px-6 py-2.5 text-[#64b496] rounded font-semibold hover:bg-[#64b496] hover:text-white duration-300"
+                >
+                  Check Out
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
